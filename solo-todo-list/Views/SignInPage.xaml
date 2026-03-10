@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="solo_todo_list.Views.SignInPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Sign In">
+    <VerticalStackLayout Margin="20" Spacing="20">
+        <Image
+            HeightRequest="200"
+            Source="dotnet_bot.png"
+            WidthRequest="200" />
+
+        <Entry x:Name="EmailEntry" Placeholder="Email Address" />
+        <Entry x:Name="PasswordEntry" Placeholder="Password" />
+
+        <Button
+            x:Name="SignInBtn"
+            Clicked="SignInBtn_Clicked"
+            Text="Sign In" />
+
+        <Button
+            x:Name="SignUpBtn"
+            Clicked="SignUpBtn_Clicked"
+            Text="Sign Up" />
+    </VerticalStackLayout>
+</ContentPage>

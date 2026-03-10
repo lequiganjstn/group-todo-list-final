@@ -1,0 +1,11 @@
+﻿Incomplete:
+Completed Page
+Profile Page
+Sign Up Page - Sign Up functionality
+To Do Page - Delete, Complete, and Add functionality
+To Do List Model - add Status
+
+Missing:
+Add Task Page
+Edit Task Page
+Edit Completed Task Page
