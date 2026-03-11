@@ -5,11 +5,5 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Completed">
     <VerticalStackLayout Margin="20" Spacing="20">
-        <Entry x:Name="TitleEntry" Placeholder="Title"/>
-        <Entry x:Name="DetailsEntry" Placeholder="Details"/>
-        
-        <Button x:Name="UpdateBtn" Text="Update" Clicked="UpdateBtn_OnClicked"/>
-        <Button x:Name="CompleteBtn" Text="Complete" Clicked="CompleteBtn_OnClicked"/>
-        <Button x:Name="DeleteBtn" Text="Delete" Clicked="DeleteBtn_OnClicked"/>
     </VerticalStackLayout>
 </ContentPage>
