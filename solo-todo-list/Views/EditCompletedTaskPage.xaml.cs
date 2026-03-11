@@ -25,6 +25,9 @@ public partial class EditCompletedTaskPage : ContentPage
 
     private async void UpdateBtn_Clicked(object sender, EventArgs e)
     {
+        task.Title = TitleEntry.Text;
+        task.Details = DetailsEntry.Text;
+
         ToDoRepository.UpdateTask(task);
 
         await Shell.Current.GoToAsync("..");
