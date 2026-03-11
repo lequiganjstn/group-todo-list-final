@@ -1,12 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="solo_todo_list.Views.AddTaskPage">
+<ContentPage
+    x:Class="solo_todo_list.Views.AddTaskPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Add Task">
+
     <VerticalStackLayout Margin="20" Spacing="20">
-        <Entry x:Name="TitleEntry" Placeholder="Title"/>
-        <Entry x:Name="DetailsEntry" Placeholder="Details"/>
-        
-        <Button x:Name="AddBtn" Text="Add" Clicked="AddBtn_OnClicked" VerticalOptions="Center"/>
+        <Entry x:Name="TitleEntry" Placeholder="Title" />
+        <Entry x:Name="DetailsEntry" Placeholder="Details" />
+
+        <Button
+            x:Name="AddBtn"
+            Clicked="AddBtn_OnClicked"
+            Text="Add"
+            VerticalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

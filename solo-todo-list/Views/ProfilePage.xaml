@@ -2,12 +2,12 @@
 <ContentPage
     x:Class="solo_todo_list.Views.ProfilePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Profile">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
     <VerticalStackLayout Margin="20" Spacing="20">
         <Image HeightRequest="300" Source="karina_vogue_2026_1.jpg" />
 
-        <Label x:Name="NameLabel" HorizontalOptions="Center"/>
+        <Label x:Name="NameLabel" HorizontalOptions="Center" />
 
         <Button
             x:Name="SignOutBtn"

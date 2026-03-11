@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Sign In">
+
     <VerticalStackLayout Margin="20" Spacing="20">
         <Image
             HeightRequest="200"
@@ -11,7 +12,10 @@
             WidthRequest="200" />
 
         <Entry x:Name="EmailEntry" Placeholder="Email Address" />
-        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+        <Entry
+            x:Name="PasswordEntry"
+            IsPassword="True"
+            Placeholder="Password" />
 
         <Button
             x:Name="SignInBtn"
