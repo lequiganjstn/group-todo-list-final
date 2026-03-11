@@ -5,25 +5,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Sign Up">
 
-    <VerticalStackLayout Margin="20" Spacing="20">
-        <Image
-            HeightRequest="200"
-            Source="dotnet_bot.png"
-            WidthRequest="200" />
+    <ScrollView>
+        <VerticalStackLayout Margin="20" Spacing="20">
+            <Image
+                HeightRequest="200"
+                Source="dotnet_bot.png"
+                WidthRequest="200" />
 
-        <Entry x:Name="NameEntry" Placeholder="User Name" />
-        <Entry x:Name="EmailEntry" Placeholder="Email Address" />
-        <Entry x:Name="PasswordEntry" Placeholder="Password" />
-        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" />
+            <Entry x:Name="NameEntry" Placeholder="User Name" />
+            <Entry x:Name="EmailEntry" Placeholder="Email Address" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" />
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" />
 
-        <Button
-            x:Name="SignUpBtn"
-            Clicked="SignUpBtn_Clicked"
-            Text="Sign Up" />
+            <Button
+                x:Name="SignUpBtn"
+                Clicked="SignUpBtn_Clicked"
+                Text="Sign Up" />
 
-        <Button
-            x:Name="SignInBtn"
-            Clicked="SignInBtn_Clicked"
-            Text="Sign In" />
-    </VerticalStackLayout>
+            <Button
+                x:Name="SignInBtn"
+                Clicked="SignInBtn_Clicked"
+                Text="Sign In" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
