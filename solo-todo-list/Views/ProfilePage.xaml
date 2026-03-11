@@ -7,7 +7,7 @@
     <VerticalStackLayout Margin="20" Spacing="20">
         <Image HeightRequest="300" Source="karina_vogue_2026_1.jpg" />
 
-        <Label x:Name="NameLabel" />
+        <Label x:Name="NameLabel" HorizontalOptions="Center"/>
 
         <Button
             x:Name="SignOutBtn"
