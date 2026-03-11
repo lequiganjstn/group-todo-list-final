@@ -7,10 +7,10 @@
 
     <Grid Margin="20" RowDefinitions="8*, 2*">
         <ListView
-            x:Name="ToDoListView"
+            x:Name="CompletedToDoListView"
             Grid.Row="0"
-            ItemSelected="ToDoListView_ItemSelected"
-            ItemTapped="ToDoListView_ItemTapped"
+            ItemSelected="CompletedToDoListView_ItemSelected"
+            ItemTapped="CompletedToDoListView_ItemTapped"
             RowHeight="70">
             <ListView.ItemTemplate>
                 <DataTemplate>

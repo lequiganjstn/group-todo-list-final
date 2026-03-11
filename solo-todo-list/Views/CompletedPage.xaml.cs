@@ -20,20 +20,20 @@ public partial class CompletedPage : ContentPage
     private void LoadToDoList()
     {
         ObservableCollection<ToDoList> toDoLists = new ObservableCollection<ToDoList>(ToDoRepository.GetCompletedToDoList());
-        ToDoListView.ItemsSource = toDoLists;
+        CompletedToDoListView.ItemsSource = toDoLists;
     }
 
-    private async void ToDoListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private async void CompletedToDoListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        if (ToDoListView.SelectedItem != null)
+        if (CompletedToDoListView.SelectedItem != null)
         {
-            await Shell.Current.GoToAsync($"{nameof(EditCompletedTaskPage)}?Id={((ToDoList)ToDoListView.SelectedItem).ItemId}");
+            await Shell.Current.GoToAsync($"{nameof(EditCompletedTaskPage)}?Id={((ToDoList)CompletedToDoListView.SelectedItem).ItemId}");
         }
     }
 
-    private void ToDoListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    private void CompletedToDoListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        ToDoListView.SelectedItem = null;
+        CompletedToDoListView.SelectedItem = null;
     }
 
     private void DeleteBtn_Clicked(object sender, EventArgs e)
