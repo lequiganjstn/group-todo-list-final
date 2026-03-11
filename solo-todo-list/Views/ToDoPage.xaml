@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="solo_todo_list.Views.ToDoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="To Do">
+    <Grid Margin="20" RowDefinitions="8*, 2*">
+        <ListView
+            x:Name="ToDoListView"
+            Grid.Row="0"
+            RowHeight="70"
+            ItemSelected="ToDoListView_OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="4*,*,*" ColumnSpacing="20">
+                            <Label
+                                Grid.Column="0"
+                                Text="{Binding Title}"
+                                VerticalOptions="Center" />
+                            <Button
+                                x:Name="DeleteBtn"
+                                Grid.Column="1"
+                                Clicked="DeleteBtn_Clicked"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                ImageSource="delete_logo.png" />
+                            <Button
+                                x:Name="CompleteBtn"
+                                Grid.Column="2"
+                                Clicked="CompleteBtn_Clicked"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                ImageSource="completed_logo.png" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button
+            x:Name="AddBtn"
+            Grid.Row="1"
+            Clicked="AddBtn_Clicked"
+            HeightRequest="50"
+            HorizontalOptions="End"
+            ImageSource="add_logo.png"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+    </Grid>
+</ContentPage>
