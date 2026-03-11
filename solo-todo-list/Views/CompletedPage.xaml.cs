@@ -38,6 +38,10 @@ public partial class CompletedPage : ContentPage
 
     private void DeleteBtn_Clicked(object sender, EventArgs e)
     {
+        var menuItem = sender as Button;
+        ToDoList task = menuItem.CommandParameter as ToDoList;
 
+        ToDoRepository.DeleteTask(task);
+        LoadToDoList();
     }
 }

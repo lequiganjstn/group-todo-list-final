@@ -26,7 +26,7 @@ public partial class ToDoPage : ContentPage
 
     private void DeleteBtn_Clicked(object sender, EventArgs e)
     {
-        var menuItem = sender as MenuItem;
+        var menuItem = sender as Button;
         ToDoList task = menuItem.CommandParameter as ToDoList;
 
         ToDoRepository.DeleteTask(task);
@@ -35,10 +35,10 @@ public partial class ToDoPage : ContentPage
 
     private void CompleteBtn_Clicked(object sender, EventArgs e)
     {
-        var menuItem = sender as MenuItem;
+        var menuItem = sender as Button;
         ToDoList task = menuItem.CommandParameter as ToDoList;
 
-        ToDoRepository.UpdateTask(task);
+        ToDoRepository.CompleteTask(task);
         LoadToDoList();
     }
 
