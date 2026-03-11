@@ -47,10 +47,15 @@
         public static void UpdateTask(ToDoList toDoList)
         {
             ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
-            
+
+            int index = _todolist.IndexOf(task);
+
             task.Title = toDoList.Title;
             task.Details = toDoList.Details;
             task.Status = toDoList.Status;
+
+            _todolist.RemoveAt(index);
+            _todolist.Insert(index, task);
         }
 
         public static void DeleteTask(ToDoList toDoList)
