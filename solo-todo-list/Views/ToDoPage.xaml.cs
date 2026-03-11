@@ -1,5 +1,6 @@
 using solo_todo_list.Models;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace solo_todo_list.Views;
 
@@ -25,21 +26,37 @@ public partial class ToDoPage : ContentPage
 
     private void DeleteBtn_Clicked(object sender, EventArgs e)
     {
+        var menuItem = sender as MenuItem;
+        ToDoList task = menuItem.CommandParameter as ToDoList;
 
+        ToDoRepository.DeleteTask(task);
+        LoadToDoList();
     }
 
     private void CompleteBtn_Clicked(object sender, EventArgs e)
     {
+        var menuItem = sender as MenuItem;
+        ToDoList task = menuItem.CommandParameter as ToDoList;
 
+        ToDoRepository.UpdateTask(task);
+        LoadToDoList();
     }
 
-    private void AddBtn_Clicked(object sender, EventArgs e)
+    private async void AddBtn_Clicked(object sender, EventArgs e)
     {
-
+        await Shell.Current.GoToAsync(nameof(AddTaskPage));
     }
 
     private async void ToDoListView_OnItemSelected(object? sender, SelectedItemChangedEventArgs e)
     {
-	    await Shell.Current.GoToAsync(nameof(EditTaskPage));
+	    if (ToDoListView.SelectedItem != null)
+        {
+            await Shell.Current.GoToAsync($"{nameof(EditTaskPage)}?Id={((ToDoList)ToDoListView.SelectedItem).ItemId}");
+        }
+    }
+
+    private void ToDoListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        ToDoListView.SelectedItem = null;
     }
 }

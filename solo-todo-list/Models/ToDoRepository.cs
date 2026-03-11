@@ -17,7 +17,17 @@
         };
 
         public static List<ToDoList> GetToDoList() {
-            return _todolist;
+            return _todolist.Where(x => x.Status == "active").ToList();
+        }
+
+        public static List<ToDoList> GetCompletedToDoList()
+        {
+            return _todolist.Where(x => x.Status == "inactive").ToList();
+        }
+
+        public static ToDoList GetTaskById(int taskId)
+        {
+            return _todolist.FirstOrDefault(t => t.ItemId == taskId);
         }
 
         public static void AddTask(string title, string details)
@@ -36,7 +46,7 @@
 
         public static void UpdateTask(ToDoList toDoList)
         {
-            var task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
+            ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
             
             task.Title = toDoList.Title;
             task.Details = toDoList.Details;
@@ -46,6 +56,20 @@
         public static void DeleteTask(ToDoList toDoList)
         {
             _todolist.Remove(toDoList);
+        }
+
+        public static void CompleteTask(ToDoList toDoList)
+        {
+            ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
+
+            task.Status = "inactive";
+        }
+
+        public static void IncompleteTask(ToDoList toDoList)
+        {
+            ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
+
+            task.Status = "active";
         }
     }
 }

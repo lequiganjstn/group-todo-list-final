@@ -6,4 +6,9 @@ public partial class ProfilePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void SignOutBtn_Clicked(object sender, EventArgs e)
+    {
+		Application.Current.MainPage = new NavigationPage(new SignInPage());
+    }
 }

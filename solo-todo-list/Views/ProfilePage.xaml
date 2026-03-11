@@ -5,9 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Profile">
     <VerticalStackLayout Margin="20" Spacing="20">
-        <Label
-            HorizontalOptions="Center"
-            Text="Profile Page"
-            VerticalOptions="Center" />
+        <Image HeightRequest="100" Source="karina-vogue-2026-1.jpg" />
+
+        <Button
+            x:Name="SignOutBtn"
+            Clicked="SignOutBtn_Clicked"
+            Text="Sign Out" />
     </VerticalStackLayout>
 </ContentPage>

@@ -8,8 +8,9 @@
         <ListView
             x:Name="ToDoListView"
             Grid.Row="0"
-            RowHeight="70"
-            ItemSelected="ToDoListView_OnItemSelected">
+            ItemSelected="ToDoListView_OnItemSelected"
+            ItemTapped="ToDoListView_ItemTapped"
+            RowHeight="70">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -22,16 +23,18 @@
                                 x:Name="DeleteBtn"
                                 Grid.Column="1"
                                 Clicked="DeleteBtn_Clicked"
+                                CommandParameter="{Binding .}"
                                 HeightRequest="50"
-                                WidthRequest="50"
-                                ImageSource="delete_logo.png" />
+                                ImageSource="delete_logo.png"
+                                WidthRequest="50" />
                             <Button
                                 x:Name="CompleteBtn"
                                 Grid.Column="2"
                                 Clicked="CompleteBtn_Clicked"
+                                CommandParameter="{Binding .}"
                                 HeightRequest="50"
-                                WidthRequest="50"
-                                ImageSource="completed_logo.png" />
+                                ImageSource="completed_logo.png"
+                                WidthRequest="50" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

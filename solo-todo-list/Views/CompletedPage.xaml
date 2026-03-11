@@ -4,6 +4,34 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Completed">
-    <VerticalStackLayout Margin="20" Spacing="20">
-    </VerticalStackLayout>
+
+    <Grid Margin="20" RowDefinitions="8*, 2*">
+        <ListView
+            x:Name="ToDoListView"
+            Grid.Row="0"
+            ItemSelected="ToDoListView_ItemSelected"
+            ItemTapped="ToDoListView_ItemTapped"
+            RowHeight="70">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="4*,*,*" ColumnSpacing="20">
+                            <Label
+                                Grid.Column="0"
+                                Text="{Binding Title}"
+                                VerticalOptions="Center" />
+                            <Button
+                                x:Name="DeleteBtn"
+                                Grid.Column="1"
+                                Clicked="DeleteBtn_Clicked"
+                                CommandParameter="{Binding .}"
+                                HeightRequest="50"
+                                ImageSource="delete_logo.png"
+                                WidthRequest="50" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

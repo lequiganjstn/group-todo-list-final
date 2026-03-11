@@ -1,15 +1,16 @@
 using solo_todo_list.Models;
+using System.Threading.Tasks;
 
 namespace solo_todo_list.Views;
 
 [QueryProperty(nameof(taskId), "Id")]
-public partial class EditTaskPage : ContentPage
+public partial class EditCompletedTaskPage : ContentPage
 {
     private ToDoList task;
-    public EditTaskPage()
-    {
-        InitializeComponent();
-    }
+	public EditCompletedTaskPage()
+	{
+		InitializeComponent();
+	}
 
     public string taskId
     {
@@ -29,9 +30,9 @@ public partial class EditTaskPage : ContentPage
         await Shell.Current.GoToAsync("..");
     }
 
-    private async void CompleteBtn_Clicked(object sender, EventArgs e)
+    private async void IncompleteBtn_Clicked(object sender, EventArgs e)
     {
-        ToDoRepository.CompleteTask(task);
+        ToDoRepository.IncompleteTask(task);
 
         await Shell.Current.GoToAsync("..");
     }

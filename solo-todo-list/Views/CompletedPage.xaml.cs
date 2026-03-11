@@ -1,3 +1,6 @@
+using solo_todo_list.Models;
+using System.Collections.ObjectModel;
+
 namespace solo_todo_list.Views;
 
 public partial class CompletedPage : ContentPage
@@ -7,18 +10,34 @@ public partial class CompletedPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void UpdateBtn_OnClicked(object? sender, EventArgs e)
-	{
-		throw new NotImplementedException();
-	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
 
-	private void CompleteBtn_OnClicked(object? sender, EventArgs e)
-	{
-		throw new NotImplementedException();
-	}
+        LoadToDoList();
+    }
 
-	private void DeleteBtn_OnClicked(object? sender, EventArgs e)
-	{
-		throw new NotImplementedException();
-	}
+    private void LoadToDoList()
+    {
+        ObservableCollection<ToDoList> toDoLists = new ObservableCollection<ToDoList>(ToDoRepository.GetCompletedToDoList());
+        ToDoListView.ItemsSource = toDoLists;
+    }
+
+    private async void ToDoListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        if (ToDoListView.SelectedItem != null)
+        {
+            await Shell.Current.GoToAsync($"{nameof(EditCompletedTaskPage)}?Id={((ToDoList)ToDoListView.SelectedItem).ItemId}");
+        }
+    }
+
+    private void ToDoListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+        ToDoListView.SelectedItem = null;
+    }
+
+    private void DeleteBtn_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

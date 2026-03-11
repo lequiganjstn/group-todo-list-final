@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using solo_todo_list.Models;
 
 namespace solo_todo_list.Views;
