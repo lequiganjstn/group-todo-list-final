@@ -46,16 +46,9 @@
 
         public static void UpdateTask(ToDoList toDoList)
         {
-            ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
+            int index = _todolist.IndexOf(toDoList);
 
-            int index = _todolist.IndexOf(task);
-
-            task.Title = toDoList.Title;
-            task.Details = toDoList.Details;
-            task.Status = toDoList.Status;
-
-            _todolist.RemoveAt(index);
-            _todolist.Insert(index, task);
+            _todolist[index] = toDoList;
         }
 
         public static void DeleteTask(ToDoList toDoList)
@@ -65,14 +58,14 @@
 
         public static void CompleteTask(ToDoList toDoList)
         {
-            ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
+            ToDoList task = GetTaskById(toDoList.ItemId);
 
             task.Status = "inactive";
         }
 
         public static void IncompleteTask(ToDoList toDoList)
         {
-            ToDoList task = _todolist.FirstOrDefault(t => t.ItemId == toDoList.ItemId);
+            ToDoList task = GetTaskById(toDoList.ItemId);
 
             task.Status = "active";
         }
