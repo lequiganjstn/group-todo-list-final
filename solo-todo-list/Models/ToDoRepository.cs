@@ -17,12 +17,12 @@
         };
 
         public static List<ToDoList> GetToDoList() {
-            return _todolist.Where(x => x.Status == "active").ToList();
+            return _todolist.Where(x => x.Status == "active" && x.UserId == UserSession.Id).ToList();
         }
 
         public static List<ToDoList> GetCompletedToDoList()
         {
-            return _todolist.Where(x => x.Status == "inactive").ToList();
+            return _todolist.Where(x => x.Status == "inactive" && x.UserId == UserSession.Id).ToList();
         }
 
         public static ToDoList GetTaskById(int taskId)
