@@ -10,7 +10,7 @@ namespace solo_todo_list
 
             Routing.RegisterRoute(nameof(AddTaskPage), typeof(AddTaskPage));
             Routing.RegisterRoute(nameof(CompletedPage), typeof(CompletedPage));
-            Routing.RegisterRoute(nameof(EditCompletedTaskPage), typeof(EditTaskPage));
+            Routing.RegisterRoute(nameof(EditCompletedTaskPage), typeof(EditCompletedTaskPage));
             Routing.RegisterRoute(nameof(EditTaskPage), typeof(EditTaskPage));
             Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
             //Routing.RegisterRoute(nameof(SignInPage), typeof(SignInPage));
