@@ -5,21 +5,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Edit Completed Task">
 
-    <VerticalStackLayout Margin="20" Spacing="20">
+    <VerticalStackLayout
+        Padding="20"
+        BackgroundColor="Black"
+        Spacing="20">
         <Entry x:Name="TitleEntry" Placeholder="Title" />
+
         <Entry x:Name="DetailsEntry" Placeholder="Details" />
 
         <Button
             x:Name="UpdateBtn"
+            BackgroundColor="#d6d6d6"
             Clicked="UpdateBtn_Clicked"
             Text="Update" />
+
         <Button
             x:Name="IncompleteBtn"
+            BackgroundColor="Transparent"
+            BorderColor="#d6d6d6"
+            BorderWidth="1"
             Clicked="IncompleteBtn_Clicked"
-            Text="Incomplete" />
+            Text="Incomplete"
+            TextColor="#d6d6d6" />
+
         <Button
             x:Name="DeleteBtn"
+            BackgroundColor="Transparent"
+            BorderColor="#FF2C2C"
+            BorderWidth="1"
             Clicked="DeleteBtn_Clicked"
-            Text="Delete" />
+            Text="Delete"
+            TextColor="#FF2C2C" />
     </VerticalStackLayout>
 </ContentPage>
