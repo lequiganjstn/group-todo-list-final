@@ -11,15 +11,15 @@
         <ShellContent
             Title="To Do"
             ContentTemplate="{DataTemplate views:ToDoPage}"
-            Icon="todo_logo.png" />
+            Icon="todo_icon.png" />
         <ShellContent
             Title="Completed"
             ContentTemplate="{DataTemplate views:CompletedPage}"
-            Icon="completed_logo.png" />
+            Icon="check_icon.png" />
         <ShellContent
             Title="Profile"
             ContentTemplate="{DataTemplate views:ProfilePage}"
-            Icon="profile_logo.png" />
+            Icon="profile_icon.png" />
     </TabBar>
 
 </Shell>

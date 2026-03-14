@@ -4,13 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <VerticalStackLayout Margin="20" Spacing="20">
+    <VerticalStackLayout
+        Padding="20"
+        BackgroundColor="Black"
+        Spacing="20">
         <Image HeightRequest="300" Source="karina_vogue_2026_1.jpg" />
 
         <Label x:Name="NameLabel" HorizontalOptions="Center" />
 
         <Button
             x:Name="SignOutBtn"
+            BackgroundColor="#d6d6d6"
             Clicked="SignOutBtn_Clicked"
             Text="Sign Out" />
     </VerticalStackLayout>
