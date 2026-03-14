@@ -8,7 +8,7 @@
         Padding="20"
         BackgroundColor="Black"
         Spacing="20">
-        <Image HeightRequest="300" Source="karina_vogue_2026_1.jpg" />
+        <Image HeightRequest="300" Source="karina_vogue_2026_1_removebg.png" />
 
         <Label x:Name="NameLabel" HorizontalOptions="Center" />
 
