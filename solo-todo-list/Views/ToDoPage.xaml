@@ -56,7 +56,7 @@
             Clicked="AddBtn_Clicked"
             HeightRequest="50"
             HorizontalOptions="End"
-            ImageSource="add_logo.png"
+            ImageSource="add_icon.png"
             VerticalOptions="Center"
             WidthRequest="50" />
     </Grid>
