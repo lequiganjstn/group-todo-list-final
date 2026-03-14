@@ -6,10 +6,14 @@
     Title="Sign Up">
 
     <ScrollView>
-        <VerticalStackLayout Margin="20" Spacing="20">
+        <VerticalStackLayout
+            Padding="20"
+            BackgroundColor="black"
+            Spacing="20">
+
             <Image
                 HeightRequest="200"
-                Source="dotnet_bot.png"
+                Source="kleos_logo.png"
                 WidthRequest="200" />
 
             <Entry x:Name="NameEntry" Placeholder="User Name" />
@@ -19,13 +23,18 @@
 
             <Button
                 x:Name="SignUpBtn"
+                BackgroundColor="#d6d6d6"
                 Clicked="SignUpBtn_Clicked"
                 Text="Sign Up" />
 
             <Button
                 x:Name="SignInBtn"
+                BackgroundColor="Transparent"
+                BorderColor="#d6d6d6"
+                BorderWidth="1"
                 Clicked="SignInBtn_Clicked"
-                Text="Sign In" />
+                Text="Sign In"
+                TextColor="#d6d6d6" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
