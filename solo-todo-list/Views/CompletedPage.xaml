@@ -4,7 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Grid Margin="20" RowDefinitions="8*, 2*">
+    <Grid
+        Padding="20"
+        BackgroundColor="Black"
+        RowDefinitions="8*, 2*">
         <ListView
             x:Name="CompletedToDoListView"
             Grid.Row="0"
@@ -22,10 +25,11 @@
                             <Button
                                 x:Name="DeleteBtn"
                                 Grid.Column="1"
+                                BackgroundColor="#d6d6d6"
                                 Clicked="DeleteBtn_Clicked"
                                 CommandParameter="{Binding .}"
                                 HeightRequest="50"
-                                ImageSource="delete_logo.png"
+                                ImageSource="delete_icon.png"
                                 WidthRequest="50" />
                         </Grid>
                     </ViewCell>
