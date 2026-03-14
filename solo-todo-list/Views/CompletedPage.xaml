@@ -20,6 +20,7 @@
                         <Grid ColumnDefinitions="4*,*,*" ColumnSpacing="20">
                             <Label
                                 Grid.Column="0"
+                                FontSize="Small"
                                 Text="{Binding Title}"
                                 VerticalOptions="Center" />
                             <Button
