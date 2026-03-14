@@ -6,12 +6,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Add Task">
 
-    <VerticalStackLayout Margin="20" Spacing="20">
+    <VerticalStackLayout
+        Padding="20"
+        BackgroundColor="Black"
+        Spacing="20">
         <Entry x:Name="TitleEntry" Placeholder="Title" />
+
         <Entry x:Name="DetailsEntry" Placeholder="Details" />
 
         <Button
             x:Name="AddBtn"
+            BackgroundColor="#d6d6d6"
             Clicked="AddBtn_OnClicked"
             Text="Add"
             VerticalOptions="Center" />
