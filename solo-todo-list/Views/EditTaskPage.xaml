@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="solo_todo_list.Views.EditTaskPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Edit Task">
+
+    <VerticalStackLayout
+        Padding="20"
+        BackgroundColor="Black"
+        Spacing="20">
+        <Entry x:Name="TitleEntry" Placeholder="Title" TextColor="White"/>
+
+        <Entry x:Name="DetailsEntry" Placeholder="Details" TextColor="White"/>
+
+        <Button
+            x:Name="UpdateBtn"
+            BackgroundColor="#d6d6d6"
+            Clicked="UpdateBtn_Clicked"
+            Text="Update" 
+            TextColor="Black"/>
+
+        <Button
+            x:Name="CompleteBtn"
+            BackgroundColor="Transparent"
+            BorderColor="#5CE65C"
+            BorderWidth="1"
+            Clicked="CompleteBtn_Clicked"
+            Text="Complete"
+            TextColor="#5CE65C" />
+
+        <Button
+            x:Name="DeleteBtn"
+            BackgroundColor="Transparent"
+            BorderColor="#FF2C2C"
+            BorderWidth="1"
+            Clicked="DeleteBtn_Clicked"
+            Text="Delete"
+            TextColor="#FF2C2C" />
+    </VerticalStackLayout>
+</ContentPage>

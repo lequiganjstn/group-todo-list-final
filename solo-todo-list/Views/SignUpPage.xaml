@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="solo_todo_list.Views.SignUpPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Sign Up">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            BackgroundColor="black"
+            Spacing="20">
+
+            <Image
+                HeightRequest="200"
+                Source="kleos_logo.png"
+                WidthRequest="200" />
+
+            <Entry x:Name="NameEntry" Placeholder="User Name" TextColor="White" />
+            
+            <Entry x:Name="EmailEntry" Placeholder="Email Address" TextColor="White" />
+            
+            <Entry x:Name="PasswordEntry" Placeholder="Password" TextColor="White" />
+            
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" TextColor="White" />
+
+            <Button
+                x:Name="SignUpBtn"
+                BackgroundColor="#d6d6d6"
+                Clicked="SignUpBtn_Clicked"
+                Text="Sign Up"
+                TextColor="Black"/>
+
+            <Button
+                x:Name="SignInBtn"
+                BackgroundColor="Transparent"
+                BorderColor="#d6d6d6"
+                BorderWidth="1"
+                Clicked="SignInBtn_Clicked"
+                Text="Sign In"
+                TextColor="#d6d6d6" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

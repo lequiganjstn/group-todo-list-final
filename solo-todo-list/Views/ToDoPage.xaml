@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="solo_todo_list.Views.ToDoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid
+        Padding="20"
+        BackgroundColor="Black"
+        RowDefinitions="8*, 2*">
+        <ListView
+            x:Name="ToDoListView"
+            Grid.Row="0"
+            ItemSelected="ToDoListView_OnItemSelected"
+            ItemTapped="ToDoListView_ItemTapped"
+            RowHeight="70"
+            BackgroundColor="Black" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="4*,*,*" ColumnSpacing="20">
+                            <Label
+                                Grid.Column="0"
+                                FontSize="Small"
+                                Text="{Binding Title}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+
+                            <Button
+                                x:Name="DeleteBtn"
+                                Grid.Column="1"
+                                BackgroundColor="#d6d6d6"
+                                Clicked="DeleteBtn_Clicked"
+                                CommandParameter="{Binding .}"
+                                HeightRequest="50"
+                                ImageSource="delete_icon.png"
+                                WidthRequest="50" />
+
+                            <Button
+                                x:Name="CompleteBtn"
+                                Grid.Column="2"
+                                BackgroundColor="#d6d6d6"
+                                Clicked="CompleteBtn_Clicked"
+                                CommandParameter="{Binding .}"
+                                HeightRequest="50"
+                                ImageSource="check_icon.png"
+                                WidthRequest="50" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button
+            x:Name="AddBtn"
+            Grid.Row="1"
+            BackgroundColor="#d6d6d6"
+            Clicked="AddBtn_Clicked"
+            HeightRequest="50"
+            HorizontalOptions="End"
+            ImageSource="add_icon.png"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+    </Grid>
+</ContentPage>

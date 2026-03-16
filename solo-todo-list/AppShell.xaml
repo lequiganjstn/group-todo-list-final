@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="solo_todo_list.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:solo_todo_list"
+    xmlns:views="clr-namespace:solo_todo_list.Views"
+    Title="solo_todo_list">
+
+    <TabBar>
+        <ShellContent
+            Title="To Do"
+            ContentTemplate="{DataTemplate views:ToDoPage}"
+            Icon="todo_icon.png" />
+        <ShellContent
+            Title="Completed"
+            ContentTemplate="{DataTemplate views:CompletedPage}"
+            Icon="check_icon.png" />
+        <ShellContent
+            Title="Profile"
+            ContentTemplate="{DataTemplate views:ProfilePage}"
+            Icon="profile_icon.png" />
+    </TabBar>
+
+</Shell>

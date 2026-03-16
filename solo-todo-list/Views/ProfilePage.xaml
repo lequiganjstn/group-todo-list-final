@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="solo_todo_list.Views.ProfilePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <VerticalStackLayout
+        Padding="20"
+        BackgroundColor="Black"
+        Spacing="20">
+        <Image HeightRequest="300" Source="karina_vogue_2026_1_removebg.png" />
+
+        <Label x:Name="NameLabel" HorizontalOptions="Center" TextColor="White"/>
+
+        <Button
+            x:Name="SignOutBtn"
+            BackgroundColor="#d6d6d6"
+            Clicked="SignOutBtn_Clicked"
+            Text="Sign Out"
+            TextColor="Black"/>
+    </VerticalStackLayout>
+</ContentPage>
